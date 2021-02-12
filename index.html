@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html class="no-js" lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Utilité des Branches de GitFlow</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- <link rel="manifest" href="site.webmanifest"> -->
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- CSS here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/gijgo.css">
+    <link rel="stylesheet" href="css/animate.min.css">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/slicknav.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/responsive.css"> -->
+</head>
+ 
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+    <!-- header-start -->
+    <header>
+        <div class="header-area ">
+            <div id="sticky-header" class="main-header-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <
+                        <div class="col-xl-6 col-lg-7">
+                            <div class="main-menu  d-none d-lg-block">
+                                <nav>
+                                    <ul id="navigation">
+                                        <li><a href="index1.html">home</a></li>
+                                     
+                                   
+                                       
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <div class="col-xl-3 col-lg-3 d-none d-lg-block">
+                            <div class="Appointment">
+                                <div class="book_btn d-none d-lg-block">
+                                    <a  href="#"> <i class="fa fa-phone"></i> 0033615042148</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="mobile_menu d-block d-lg-none"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- header-end -->
+
+    
+    <!-- slider_area_start -->
+    <div class="slider_area">
+        
+        <div class="poly_img">
+            <img src="img/ilstrator/poly.png" alt="">
+        </div>
+        <div class="single_slider  d-flex align-items-center slider_bg_1">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="slider_text text-center">
+                            <div class="text">
+                                <h3>
+                                   L’utilité des différente Branches de GitFlow
+                                </h3>
+                           
+                            </div>
+                            <div class="ilstrator_thumb">
+                                <img src="img/ilstrator/illustration.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- slider_area_end -->
+    <p>Un workflow ou flux opérationnel, est la représentation d’une suite d'opérations ou de tâches exécutées par une personne ou un groupe de personne.</p>
+    <p>
+Parmi les workflow Git, GitFlow est le plus connu publiée par Vincent Driessen (nvie). Le workflow Gitflow définit un modèle de création de branche strict conçu autour de la livraison de projet. Cela fournit un framework solide pour la gestion de projets plus importants</p>
+<h3>Pour commencer: pourquoi appliquer une stratégie d’utilisation de git ?</h3>
+<p>la mauvaise utilisation de git peut causer des pertes de données mais aussi des conflits a chaque comit / merge </p>
+<h2>
+    
+    Comment utiliser GitFlow ?
+</h2>
+<p>GitFlow est une liste de regle qui se basent sur les fonctionnement par branche de git 
+Principe de base:
+le projet sera basé sur deux branche différente;  <strong>master </strong> et <strong>develop</strong> auquel l’utilisateur n’aura pas acces en ecriture</p>
+<p>la branche master représente le miroir de notre production, on y pousse nos modification directement 
+dans la branche develop on regroupe les nouvelle fonctionnalités qui vont être livrés dans la version suivante, il est conseillé de ne pas faire de modifications directement 
+</p>
+<p>Développer des fonctionnalités
+Donc on va développer dans la branche de type <strong>feature</strong></p>
+</p>
+<p>
+  <img src="img/image1.png" alt="image 1" />
+</p>
+<p>La fonctionnalite suivante qui sera developpe va etre applique a la prochaine version 
+Donc on creer la branche a partir de la branche develop
+</p>
+<p>
+  <img src="img/image2.png" alt="image 2" />
+</p>
+A la fin le travail sera rapatrié sur la branche de développement et la branche feature devient obsolète</p>
+<p>
+la nouvelle version pour la production sera dans la branche de type release
+</p>
+<p>
+  <img src="img/image3.png" alt="image 3" />
+</p>
+<p>En créant la branche release a partir de la branche develop, cela va permettre de lancer des tests et appliquer les correction pendant que d’autres personne de l'équipe développent des nouvelle fonctionnalités pour la version suivante</p>
+<p>
+  <img src="img/image4.png" alt="image 4" />
+</p>
+
+
+<p>A la fin des tests la nouvelle version est prête à la mise en production, on pousse tout vers la branche master et on applique les corrections apportée dans la branche développement </p>
+<p>En utilisant le numéro de la dernière version, on crée un tag sur le dernier commit de la branche de production et on supprime la branche release car elle ne sert plus a rien 
+pour corriger un bug en production on utilisera la branche de type hotfix
+</p>
+<p>
+  <img src="img/image5.png" alt="image 5" />
+</p>
+<p>Pour ce cas particulier il est conseillé de créer une branche à partir du miroir de production pour ne pas pousser toutes les fonctionnalités de la branche développement en production</p>
+
+<p>
+  <img src="img/image6.png" alt="image 6" />
+</p>
+<p>Après avoir corrigé le bug, on doit l’appliquer sur le dev et la prod , supprime la branche  hotfix.</p>
+<h2>    Quelques commandes Git Flow</h2>
+
+
+   <ul>
+                <li>git flow init : pour l'installation de  Git et GitFlow dans un projet.</li>
+                <li> git flow feature start <nom> : pour commencer le développement d'une nouvelle fonctionnalité.  </li>
+                <li> git flow feature finish <nom> : pour terminer le développement d'une nouvelle fonctionnalité.</li>
+                    <li>git flow release start <version> : pour démarrer le développement d'une nouvelle release.</li>
+                    <li> git flow release finish <nom> : pour terminer le développement d'une nouvelle release./li>
+                    <li>git flow hotfix start <version> : pour démarrer le développement d'un nouveau hotfix.</li>
+                    <li>git flow hotfix finish <nom> : pour terminer le développement d'un nouveau hotfix</li>
+                    <li></li>
+            </ul>
+            <p>GitFlow s'occupe de la création des branches de départ, les branches de fin, de créer les tags et de supprimer les bonnes branches.</p>
+
+
+
+
+
+    <!-- service_area  -->
+    <div class="service_area">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/seo_1.svg" alt="">
+                        </div>
+                        
+                
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/seo_2.svg" alt="">
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="col-xl-4 col-md-4">
+                    <div class="single_service text-center">
+                        <div class="icon">
+                            <img src="img/svg_icon/seo_3.svg" alt="">
+                        </div>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--/ service_area  -->
+        <h2> Site web fait ... </h2>
+
+        
+
+
+    <!-- JS here -->
+    <script src="js/vendor/modernizr-3.5.0.min.js"></script>
+    <script src="js/vendor/jquery-1.12.4.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/isotope.pkgd.min.js"></script>
+    <script src="js/ajax-form.js"></script>
+    <script src="js/waypoints.min.js"></script>
+    <script src="js/jquery.counterup.min.js"></script>
+    <script src="js/imagesloaded.pkgd.min.js"></script>
+    <script src="js/scrollIt.js"></script>
+    <script src="js/jquery.scrollUp.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/nice-select.min.js"></script>
+    <script src="js/jquery.slicknav.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/plugins.js"></script>
+    <script src="js/gijgo.min.js"></script>
+
+    <!--contact js-->
+    <script src="js/contact.js"></script>
+    <script src="js/jquery.ajaxchimp.min.js"></script>
+    <script src="js/jquery.form.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
+    <script src="js/mail-script.js"></script>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>
